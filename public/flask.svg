@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Flask / Erlenmeyer flask icon -->
+  <!-- Neck -->
+  <line x1="26" y1="8" x2="26" y2="24"/>
+  <line x1="38" y1="8" x2="38" y2="24"/>
+  <!-- Top rim -->
+  <line x1="22" y1="8" x2="42" y2="8"/>
+  <!-- Cork/stopper dots -->
+  <circle cx="32" cy="5" r="1.5" fill="white" stroke="none"/>
+  <!-- Flask body -->
+  <path d="M26 24L10 50c-2 3.5.5 8 5 8h34c4.5 0 7-4.5 5-8L38 24"/>
+  <!-- Liquid level -->
+  <path d="M17 44h30" stroke-dasharray="3 2" opacity="0.5"/>
+  <!-- Bubbles -->
+  <circle cx="28" cy="48" r="1.5" fill="white" stroke="none" opacity="0.6"/>
+  <circle cx="35" cy="46" r="1" fill="white" stroke="none" opacity="0.6"/>
+  <circle cx="32" cy="51" r="1.2" fill="white" stroke="none" opacity="0.6"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="white">
+  <!-- Palo Alto Networks - shield/flame logo simplified -->
+  <!-- Shield shape -->
+  <path d="M32 4L8 16v16c0 14 10 22 24 26 14-4 24-12 24-26V16L32 4z" fill="none" stroke="white" stroke-width="2.5"/>
+  <!-- Inner flame/abstract mark -->
+  <path d="M32 14c-4 4-10 10-10 18 0 6 4 10 10 14 6-4 10-8 10-14 0-8-6-14-10-18z" opacity="0.8"/>
+  <path d="M32 22c-2 3-5 6-5 10 0 3 2 6 5 8 3-2 5-5 5-8 0-4-3-7-5-10z" fill="#1a1a2e" opacity="0.4"/>
+</svg>

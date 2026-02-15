@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="white">
+  <!-- GitLab fox/tanuki logo simplified -->
+  <path d="M32 56L12 36l4-12 6 18h20l6-18 4 12L32 56z"/>
+  <path d="M12 36l-4-12 8-16 6 18-10 10z" opacity="0.6"/>
+  <path d="M52 36l4-12-8-16-6 18 10 10z" opacity="0.6"/>
+  <path d="M22 42h20l-6-18H28l-6 18z" opacity="0.3"/>
+</svg>

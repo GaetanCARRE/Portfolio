@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Ansible "A" in circle -->
+  <circle cx="32" cy="32" r="28" fill="white"/>
+  <!-- A letterform -->
+  <path d="M32 14L44 48H39L36 40L24 48L32 14z" fill="#1a1a2e"/>
+  <path d="M28 36l8-16 4 10-12 6z" fill="#1a1a2e" opacity="0.3"/>
+</svg>
