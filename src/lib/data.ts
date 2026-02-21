@@ -5,7 +5,7 @@ export const CREDLY_USERNAME = "gaetan-carre.58d49ebb";
 export const personalInfo = {
   name: "Gaëtan",
   surname: "CARRÉ",
-  title: "Developer & DevNetOps Engineer",
+  title: "Software Engineer Infrastructure",
   location: "Paris, France",
   experience: "2 years at Thales as DevNetOps Engineer",
   education: "Cybersecurity Engineering Degree — ECE Paris",
@@ -31,26 +31,96 @@ export const techStack: TechItem[] = [
   { name: "RabbitMQ", icon: "devicon-rabbitmq-original", iconType: "devicon", category: "tool" },
   // Observability / SRE
   { name: "Grafana", icon: "devicon-grafana-plain", iconType: "devicon", category: "observability" },
-  { name: "Loki", icon: "/loki.svg", iconType: "svg", category: "observability" },
+  { name: "Loki", icon: "devicon-grafana-plain", iconType: "devicon", category: "observability" },
   // Networking
-  { name: "Palo Alto", icon: "/palo-alto.svg", iconType: "svg", category: "networking" },
-  { name: "Juniper SRX", icon: "/juniper-networks-logo-4.svg", iconType: "svg", category: "networking" },
+  { name: "Palo Alto", icon: "/firewall.svg", iconType: "svg", category: "networking" },
+  { name: "Juniper SRX", icon: "/firewall.svg", iconType: "svg", category: "networking" },
+  { name: "Routing & Switching", icon: "/router.svg", iconType: "svg", category: "networking" },
 ];
 
 export const projects: Project[] = [
   {
-    title: "Finsight",
+    title: "WealthScale",
     description:
-      "Full-stack portfolio tracking application with performance analytics, real-time market data and automated calculations.",
-    stack: ["Next.js", "Go", "Python", "MongoDB", "Docker"],
-    github: "https://github.com",
+      "A modern portfolio management platform for tracking investments across multiple brokers. Features real-time portfolio valuation, TWR performance metrics with benchmark comparison, automated broker imports, asset screener with fundamental data, and dividend tracking — all built with a microservices architecture.",
+    stack: [
+      "React",
+      "TypeScript",
+      "Go",
+      "Python",
+      "MongoDB",
+      "RabbitMQ",
+      "Docker",
+      "Grafana",
+    ],
+    github: "https://github.com/GaetanCARRE/wealthscale-public",
+    demo: "https://app.wealthscale.xyz",
+    kind: "personal",
+    featured: true,
+    highlights: [
+      "Real-time portfolio valuation with historical charts & TWR performance",
+      "Automated broker import (Revolut, CSV) with duplicate detection",
+      "Asset screener with fundamental data, financials & interactive charts",
+      "Diversification analysis by sector, industry, country & currency",
+      "Event-driven microservices with Go API gateway & Python data pipeline",
+    ],
+    screenshots: [
+      { src: "/projects/wealthscale/dashboard.png", alt: "Portfolio Dashboard" },
+      { src: "/projects/wealthscale/diversification.png", alt: "Diversification Analysis" },
+      { src: "/projects/wealthscale/Positions.jpeg", alt: "Positions Overview" },
+      { src: "/projects/wealthscale/buys.png", alt: "Buy/Sell History on Price Curve" },
+      { src: "/projects/wealthscale/transactions.png", alt: "Transactions Management" },
+      { src: "/projects/wealthscale/screener.png", alt: "Asset Screener" },
+      { src: "/projects/wealthscale/screener_charts.png", alt: "Screener Charts" },
+      { src: "/projects/wealthscale/watchlist.jpeg", alt: "Watchlists" },
+      { src: "/projects/wealthscale/import_revolut.gif", alt: "Revolut Import Demo" },
+    ],
   },
   {
-    title: "Portfolio",
+    title: "GoFlix",
     description:
-      "This portfolio! Built with Next.js 15, TypeScript, shadcn/ui and dynamic Credly integration.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
-    github: "https://github.com",
+      "A Netflix-style full-stack streaming platform built with Go and React. It includes JWT authentication with refresh flow, video playback with progress tracking, personal watchlists, advanced content browsing, and an admin panel for managing the catalog.",
+    stack: [
+      "Go",
+      "React",
+      "PostgreSQL",
+      "JWT",
+      "Docker",
+      "Tailwind CSS",
+      "TMDB API",
+    ],
+    github: "https://github.com/GaetanCARRE/Netflix-Go",
+    kind: "personal",
+    featured: true,
+    highlights: [
+      "Netflix-like browsing experience with search, genre filtering, and responsive UI",
+      "Secure auth flow with JWT access tokens and refresh token rotation",
+      "Video streaming with resume playback and per-user progress tracking",
+      "Admin panel to create, edit, and delete movies/series with TMDB poster integration",
+      "Dockerized multi-service architecture with Go REST API and PostgreSQL backend",
+    ],
+    screenshots: [
+      { src: "/projects/goflix/home.png", alt: "Home Page" },
+      { src: "/projects/goflix/movies.png", alt: "Movies Listing" },
+      { src: "/projects/goflix/movie_modal.png", alt: "Movie Details Modal" },
+      { src: "/projects/goflix/admin.png", alt: "Admin Catalog Management" },
+      { src: "/projects/goflix/demo.gif", alt: "GoFlix Demo" },
+    ],
+  },
+  {
+    title: "Gambas",
+    description:
+      "Firewall automation platform to manage the full firewall lifecycle, from opening network flows to cleanup operations, while maintaining object lifecycle as a source of truth and automating provisioning and deployments across environments.",
+    stack: [
+      "GitLab CI",
+      "Python (Flask)",
+      "React",
+      "Automated Deployment",
+      "Multi-Env (Prod/Preprod)",
+      "Tufin",
+      "Infoblox",
+    ],
+    kind: "pro",
   },
   {
     title: "AI Agent GenAI",
@@ -58,6 +128,7 @@ export const projects: Project[] = [
       "Autonomous AI agent with execution loop and function calling. Capable of interpreting requests, dynamically calling tools and executing Python code.",
     stack: ["Python", "GenAI", "Function Calling"],
     github: "https://github.com/GaetanCARRE/ai-agent-genai",
+    kind: "personal",
   },
 ];
 
@@ -82,7 +153,7 @@ export const socialLinks = [
 export const navItems = [
   { label: "About", href: "#about" },
   { label: "Stack", href: "#stack" },
-  { label: "Certifications", href: "#certifications" },
   { label: "Projects", href: "#projects" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];

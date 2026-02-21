@@ -69,7 +69,7 @@ export default function Hero() {
             <Button size="lg" className="gap-2 px-6" asChild>
               <a href="/cv.pdf" download>
                 <Download size={18} />
-                Download my CV
+                Download my Resume
               </a>
             </Button>
           </motion.div>

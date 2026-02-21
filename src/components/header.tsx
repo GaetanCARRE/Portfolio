@@ -50,7 +50,7 @@ export default function Header() {
           <Button size="sm" variant="outline" className="ml-3" asChild>
             <a href="/cv.pdf" download>
               <Download size={14} />
-              CV
+              Resume
             </a>
           </Button>
           <Button size="sm" className="ml-2" asChild>
@@ -91,7 +91,7 @@ export default function Header() {
               <Button size="sm" variant="outline" className="mt-2" asChild>
                 <a href="/cv.pdf" download onClick={() => setMobileOpen(false)}>
                   <Download size={14} />
-                  Download CV
+                  Download Resume
                 </a>
               </Button>
               <Button size="sm" className="mt-2" asChild>

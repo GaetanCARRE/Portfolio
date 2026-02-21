@@ -11,8 +11,8 @@ export default function Home() {
       <Header />
       <Hero />
       <TechStack />
-      <Certifications />
       <Projects />
+      <Certifications />
       <Contact />
     </main>
   );

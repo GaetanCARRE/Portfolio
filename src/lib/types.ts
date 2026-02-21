@@ -65,13 +65,22 @@ export interface TechItem {
   category: "language" | "framework" | "tool" | "networking" | "observability";
 }
 
+export interface ProjectScreenshot {
+  src: string;
+  alt: string;
+}
+
 export interface Project {
   title: string;
   description: string;
   stack: string[];
+  kind: "pro" | "personal";
   github?: string;
   demo?: string;
   image?: string;
+  featured?: boolean;
+  highlights?: string[];
+  screenshots?: ProjectScreenshot[];
 }
 
 export interface SocialLink {
