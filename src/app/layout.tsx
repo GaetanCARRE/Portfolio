@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { siteConfig } from "@/lib/seo";
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -8,24 +9,63 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gaëtan Carré — Developer & DevNetOps Engineer",
-  description:
-    "Gaëtan Carré's portfolio — Developer and DevNetOps Engineer based in Paris. Specialized in Python, Go, infrastructure and automation.",
+  metadataBase: new URL(siteConfig.siteUrl),
+  title: {
+    default: siteConfig.title,
+    template: "%s | Gaëtan Carré",
+  },
+  description: siteConfig.description,
   keywords: [
     "Gaëtan Carré",
-    "Developer",
+    "Software Engineer Infrastructure",
     "DevNetOps",
     "Python",
     "Go",
+    "TypeScript",
     "Portfolio",
     "Paris",
     "Cybersecurity",
+    "Automation",
+    "Infrastructure",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  authors: [{ name: siteConfig.name, url: siteConfig.siteUrl }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "Gaëtan Carré — Developer & DevNetOps Engineer",
-    description:
-      "Developer and DevNetOps Engineer based in Paris. Specialized in Python, Go, infrastructure and automation.",
+    title: siteConfig.title,
+    description: siteConfig.description,
     type: "website",
+    url: siteConfig.siteUrl,
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
+    images: [
+      {
+        url: "/profile.png",
+        width: 1200,
+        height: 630,
+        alt: "Gaëtan Carré portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: ["/profile.png"],
   },
 };
 
