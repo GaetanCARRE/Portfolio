@@ -9,7 +9,7 @@ export const personalInfo = {
   location: "Paris, France",
   experience: "2 years at Thales as DevNetOps Engineer",
   education: "Cybersecurity Engineering Degree — ECE Paris",
-  hobbies: "Ski, Making Coffee, F1, Personal Finance",
+  hobbies: "Ski, F1, Making Coffee, Personal Finance",
   email: "gaetancarre.pro@gmail.com",
 };
 
