@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Award, Calendar, Building2, ShieldCheck } from "lucide-react";
 import type { CredlyBadge } from "@/lib/types";
+import { CREDLY_USERNAME } from "@/lib/data";
 
 export default function Certifications() {
   const [badges, setBadges] = useState<CredlyBadge[]>([]);
@@ -13,7 +13,7 @@ export default function Certifications() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch("/api/credly")
+    fetch(`https://www.credly.com/users/${CREDLY_USERNAME}/badges.json`)
       .then((res) => res.json())
       .then((data) => {
         setBadges(data.data || []);
@@ -106,13 +106,13 @@ function CertificationCard({
       {/* Badge image */}
       <div className="flex items-start gap-4 mb-4">
         <div className="relative w-16 h-16 flex-shrink-0">
-          <Image
+          <img
             src={badge.badge_template?.image_url || badge.image_url}
             alt={badge.badge_template?.name || "Certification badge"}
             width={64}
             height={64}
             className="object-contain rounded-lg"
-            unoptimized
+            loading="lazy"
           />
         </div>
         <div className="flex-1 min-w-0">

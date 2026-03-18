@@ -2,12 +2,25 @@ import { TechItem, Project } from "./types";
 
 export const CREDLY_USERNAME = "gaetan-carre.58d49ebb";
 
+function formatYearsSince(startDate: Date) {
+  const now = new Date();
+  const months =
+    (now.getFullYear() - startDate.getFullYear()) * 12 +
+    (now.getMonth() - startDate.getMonth()) +
+    1;
+  const years = Math.max(0, months / 12);
+
+  return `${years.toFixed(1)} years`;
+}
+
+const thalesStartDate = new Date(2022, 8, 1);
+
 export const personalInfo = {
   name: "Gaëtan",
   surname: "CARRÉ",
   title: "Software Engineer Infrastructure",
   location: "Paris, France",
-  experience: "2 years at Thales as DevNetOps Engineer",
+  experience: `${formatYearsSince(thalesStartDate)} at Thales as DevNetOps Engineer`,
   education: "Cybersecurity Engineering Degree — ECE Paris",
   hobbies: "Ski, F1, Making Coffee, Personal Finance",
   email: "gaetancarre.pro@gmail.com",
