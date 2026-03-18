@@ -118,13 +118,9 @@ export default function Projects() {
         </motion.div>
 
         {/* Featured projects — full width with gallery */}
-        {featuredProjects.map((project, idx) => (
-          <motion.div
+        {featuredProjects.map((project) => (
+          <div
             key={project.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: idx * 0.15 }}
             className="mb-12 p-6 md:p-8 rounded-2xl bg-card/50 border border-border/50 hover:border-primary/30 transition-all duration-300"
           >
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8">
@@ -213,20 +209,15 @@ export default function Projects() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
 
         {/* Other projects — 2 column grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {otherProjects.map((project, idx) => (
-            <motion.div
+          {otherProjects.map((project) => (
+            <div
               key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              whileHover={{ y: -4 }}
-              className="group p-6 rounded-2xl bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-card transition-all duration-300"
+              className="group p-6 rounded-2xl bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-card transition-all duration-300 hover:-translate-y-1"
             >
               {/* Title */}
               <div className="flex items-center gap-2 mb-2">
@@ -284,7 +275,7 @@ export default function Projects() {
                   </a>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

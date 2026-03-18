@@ -49,18 +49,10 @@ export default function TechStack() {
                   {cat.label}
                 </h3>
                 <div className="flex flex-wrap justify-center gap-6">
-                  {items.map((tech, idx) => (
-                    <motion.div
+                  {items.map((tech) => (
+                    <div
                       key={tech.name}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{
-                        duration: 0.4,
-                        delay: catIdx * 0.1 + idx * 0.05,
-                      }}
-                      whileHover={{ y: -6, scale: 1.05 }}
-                      className="group flex flex-col items-center gap-3 p-4 rounded-xl bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-card transition-all duration-300 cursor-default w-24"
+                      className="group flex flex-col items-center gap-3 p-4 rounded-xl bg-card/50 border border-border/50 hover:border-primary/30 hover:bg-card transition-all duration-300 cursor-default w-24 hover:-translate-y-1.5 hover:scale-105"
                     >
                       <div className="w-10 h-10 flex items-center justify-center">
                         {tech.iconType === "devicon" ? (
@@ -80,7 +72,7 @@ export default function TechStack() {
                       <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors text-center">
                         {tech.name}
                       </span>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </motion.div>
