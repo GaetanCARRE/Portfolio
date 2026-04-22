@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Award, Calendar, Building2, ShieldCheck } from "lucide-react";
-import type { CredlyBadge } from "@/lib/types";
-import { CREDLY_USERNAME } from "@/lib/data";
+import type { CredlyBadge, CredlyResponse } from "@/lib/types";
 
 export default function Certifications() {
   const [badges, setBadges] = useState<CredlyBadge[]>([]);
@@ -13,8 +12,14 @@ export default function Certifications() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch(`https://www.credly.com/users/${CREDLY_USERNAME}/badges.json`)
-      .then((res) => res.json())
+    fetch("/api/credly-badges")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch certifications");
+        }
+
+        return res.json() as Promise<CredlyResponse>;
+      })
       .then((data) => {
         setBadges(data.data || []);
         setLoading(false);
